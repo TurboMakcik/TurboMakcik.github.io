@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<title>Название сайта</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/></head>
+<body><header class="mb-4" id="site-header">
+<div class="container py-3">
+<div class="d-flex flex-column flex-md-row align-items-center">
+<a class="logo-link mb-2 mb-md-0 mr-md-3" href="/"><img alt="Логотип" class="logo" height="30" src="image.jpg" width="80"/></a>
+<span class="site-title h4 mb-0">Название сайта</span>
+</div>
+</div>
+<nav class="site-nav">
+<div class="container">
+<ul class="nav flex-column flex-md-row">
+<li class="nav-item"><a class="nav-link" href="#links">Ссылки</a></li>
+<li class="nav-item"><a class="nav-link" href="#table">Таблица</a></li>
+<li class="nav-item"><a class="nav-link" href="#form">Форма</a></li>
+</ul>
+</div>
+</nav>
+</header><main class="container">
+<div class="row">
+<div class="col-12 order-2 order-md-1 col-md-7" id="links-column"><section class="content-section" id="links">
+<ul>
+<li><a href="http://kubsu.ru/"> Абсолютная ссылка</a></li>
+<li><a href="https://kubsu.ru/"> Абсолютная ссылка https</a></li>
+<li><a href="https://kubsu.ru/">
+<img alt="Изображение" class="img-fluid my-2" height="250" src="image.jpg" width="350"/></a>
+</li>
+<li><a href="/about"> Сокращённая ссылка на внутреннюю страницу</a></li>
+<li><a href="/"> Сокращённая ссылка на главную страницу</a></li>
+<li><a href="#form"> Ссылка на фрагмент текущей страницы (переход к форме)</a></li>
+<li><a href="page.html?lang=ru&amp;group=fi11&amp;page=1"> Ссылка с тремя параметрами в URL</a></li>
+<li><a href="page.html?id=42"> Ссылка с параметром id в URL</a></li>
+<li><a href="./about.html"> Относительная ссылка на страницу в текущем каталоге</a></li>
+<li><a href="about/index.html"> Относительная ссылка на страницу в каталоге about</a></li>
+<li><a href="../index.html"> Относительная ссылка на страницу уровнем выше текущего каталога</a></li>
+<li><a href="../../index.html"> Относительная ссылка на страницу двумя уровнями выше</a></li>
+<li><a href="https://kubsu.ru/">КубГУ</a> — один из ведущих вузов Краснодарского края.</li>
+<li><a href="https://ru.wikipedia.org/wiki/HTML#История"> Ссылка на фрагмент страницы стороннего сайта</a></li>
+<li class="image-map-item">
+<p>Круглая и прямоугольная области-ссылки</p>
+<img alt="Изображение с круглой и прямоугольной активными областями" class="my-2" height="200" src="image.jpg" style="max-width: 100%; height: auto;" usemap="#image-map" width="400"/>
+<map name="image-map">
+<area alt="Круглая область" coords="200,90,50" href="https://kubsu.ru/" shape="circle"/>
+<area alt="Прямоугольная область" coords="50,100,300,150" href="https://kubsu.ru/" shape="rect"/>
+</map>
+</li>
+<li><a href=""> Ссылка с пустым href</a></li>
+<li><a> Ссылка без атрибута href</a></li>
+<li><a href="https://example.com" rel="nofollow"> Ссылка, запрещённая для перехода поисковикам</a></li>
+<li><a href="noindex.html"> Ссылка на страницу, закрытую от индексации</a></li>
+<li>Нумерованный список ссылок с подписями title:
+        <ol>
+<li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ">Сайт КубГУ</a></li>
+<li><a href="https://ru.wikipedia.org/wiki/HTML" title="Статья про HTML в Википедии">HTML в Википедии</a></li>
+<li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ">Еще один сайт КубГУ</a></li>
+</ol>
+</li>
+<li><a href="ftp://student:password@ftp.kubsu.ru/reports/report.pdf"> Ссылка на файл на FTP-сервере с авторизацией</a></li>
+</ul>
+</section></div>
+<div class="col-12 order-1 order-md-2 col-md-5" id="table-column"><section class="content-section mb-4" id="table">
+<h2>Таблица</h2>
+<div class="table-wrapper">
+<table class="table table-bordered table-striped grades mb-0">
+<thead>
+<tr>
+<th>#</th>
+<th>бипки</th>
+<th>цацки</th>
+<th>тугрики</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>(текст)</td>
+<td>(текст)</td>
+<td>5.45</td>
+</tr>
+<tr>
+<td>2</td>
+<td>(текст)</td>
+<td>(текст)</td>
+<td>7.62</td>
+</tr>
+<tr class="section-row">
+<td colspan="4">опачки...</td>
+</tr>
+<tr>
+<td>3</td>
+<td>(текст)</td>
+<td>(текст)</td>
+<td>6|7</td>
+</tr>
+<tr>
+<td>4</td>
+<td>(текст)</td>
+<td>(текст)</td>
+<td>42</td>
+</tr>
+<tr>
+<td>5</td>
+<td>(текст)</td>
+<td>(текст)</td>
+<td>11</td>
+</tr>
+<tr>
+<td>6</td>
+<td>(текст)</td>
+<td>(текст)</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="content-section mb-4" id="calculator">
+<h2>Калькулятор стоимости заказа</h2>
+<form id="calculator-form" novalidate>
+  <div class="form-group">
+    <label for="prodType">Тип товара:</label>
+    <select class="form-control" id="prodType" name="prodType">
+      <option value="1">Бипки — 762 ₽/шт.</option>
+      <option value="2">Цацки — 545 ₽/шт.</option>
+      <option value="3">Тугрики — 67 ₽/шт.</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="prodQuantity">Количество:</label>
+    <input class="form-control" type="number" id="prodQuantity" name="prodQuantity" min="1" step="1" value="1" required>
+    <small id="quantity-error" class="form-text text-danger" role="alert"></small>
+  </div>
+  <div class="form-group" id="radios" hidden>
+    <p class="font-weight-bold mb-2">Вариант цацек:</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="prodOptions" id="option-ordinary" value="ordinary" checked>
+      <label class="form-check-label" for="option-ordinary">Обычная (без доплаты)</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="prodOptions" id="option-gold" value="gold">
+      <label class="form-check-label" for="option-gold">Золотая (+1 000 ₽/шт.)</label>
+    </div>
+  </div>
+  <div class="form-group" id="checkboxes" hidden>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="prop-buuzy" name="prop-buuzy">
+      <label class="form-check-label" for="prop-buuzy">Буузы (+650 ₽/шт.)</label>
+    </div>
+  </div>
+  <p class="mb-1">Цена за штуку: <strong id="unitPrice" aria-live="polite">762 ₽</strong></p>
+  <p class="mb-3">Итоговая стоимость: <strong id="prodPrice" aria-live="polite">762 ₽</strong></p>
+  <button class="btn btn-primary" type="submit">Рассчитать стоимость</button>
+  <div id="calculator-result" class="mt-3" aria-live="polite"></div>
+</form>
+</section></div>
+<div class="col-12 order-3" id="form-column"><section class="content-section" id="form">
+<h2>Форма</h2>
+<form action="#" method="post">
+<p class="mb-3">
+<label for="fio">ФИО:</label><br/>
+<input class="form-control" id="fio" name="fio" required="" type="text"/>
+</p>
+<p class="mb-3">
+<label for="phone">Телефон:</label><br/>
+<input class="form-control" id="phone" inputmode="numeric" name="phone" oninput="this.value = this.value.replace(/\D/g, '')" pattern="[0-9]+" required="" type="tel"/>
+</p>
+<p class="mb-3">
+<label for="email">E-mail:</label><br/>
+<input class="form-control" id="email" name="email" required="" type="email"/>
+</p>
+<p class="mb-3">
+<label for="birthdate">Дата рождения:</label><br/>
+<input class="form-control" id="birthdate" name="birthdate" required="" type="date"/>
+</p>
+<p class="mb-3 font-weight-bold mb-2">Пол</p>
+<label class="form-check-label form-check-inline"><input class="form-check-input" name="gender" required="" type="radio" value="male"/> Мужской </label>
+<label class="form-check-label form-check-inline"><input class="form-check-input" name="gender" type="radio" value="female"/> Женский </label>
+<p class="mb-3">
+<label for="langs">Любимый язык программирования:<br/>
+<select class="form-control" id="langs" name="langs" required="">
+<option value="pascal">Pascal</option>
+<option value="c">C</option>
+<option value="cpp">C++</option>
+<option value="js">JavaScript</option>
+<option value="php">PHP</option>
+<option value="python">Python</option>
+<option value="java">Java</option>
+<option value="haskell">Haskel</option>
+<option value="clojure">Clojure</option>
+<option value="prolog">Prolog</option>
+<option value="scala">Scala</option>
+</select>
+</label><br/>
+</p>
+<p class="mb-3">
+<label for="bio">Биография:</label><br/>
+<textarea class="form-control" cols="40" id="bio" name="bio" required="" rows="5"></textarea>
+</p>
+<p class="mb-3">
+<label class="form-check-label"><input class="form-check-input" id="contract" name="contract" required="" type="checkbox"/> С контрактом ознакомлен(а)</label>
+</p>
+<p class="mb-3">
+<button class="btn btn-primary" type="submit">Сохранить</button>
+</p>
+</form>
+</section></div>
+</div>
+</main><footer class="mt-4 py-3" id="site-footer"><div class="container"><p class="mb-0">© Максон-Клаксон</p></div></footer><script src="calculator.js" defer></script></body>
+</html>

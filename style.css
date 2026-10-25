@@ -1,0 +1,22 @@
+/* Дополнительные стили проекта. Сетка, адаптивность и отступы — средствами Bootstrap 4.3.1. */
+html { scroll-behavior: smooth; }
+body { color: #222; background: #fff; font-family: Arial, sans-serif; }
+#site-header { background: #f73b3b; }
+.site-title { color: #fff; font-weight: 700; }
+.site-nav { background: #852222; }
+.site-nav .nav-link { color: #fff; font-weight: 700; }
+.site-nav .nav-link:hover, .site-nav .nav-link:focus { color: #fff; text-decoration: underline; }
+.content-section { min-width: 0; padding-top: .5rem; }
+.content-section h2 { border-bottom: 2px solid #f73b3b; padding-bottom: .35rem; margin-bottom: 1rem; }
+#links > ul { padding-left: 1.5rem; }
+#links li { margin-bottom: .4rem; overflow-wrap: anywhere; }
+.image-map-item img { display: block; }
+.table-wrapper { width: 100%; overflow-x: auto; }
+.grades { min-width: 320px; }
+.grades thead th { color: #fff; background: #f73b3b; }
+.grades .section-row td { color: #fff; background: #852222; font-weight: 700; text-align: center; }
+#form form { max-width: 540px; }
+#form label { margin-bottom: .35rem; }
+#form textarea { resize: vertical; }
+#site-footer { background: #852222; }
+#site-footer p { color: #ddd; }
