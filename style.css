@@ -1,0 +1,358 @@
+/* Дополнительные стили проекта. Сетка, адаптивность и отступы — средствами Bootstrap 4.3.1. */
+html { scroll-behavior: smooth; }
+body { color: #222; background: #fff; font-family: Arial, sans-serif; }
+#site-header { background: #f73b3b; }
+.site-title { color: #fff; font-weight: 700; }
+.site-nav { background: #852222; }
+.site-nav .nav-link { color: #fff; font-weight: 700; }
+.site-nav .nav-link:hover, .site-nav .nav-link:focus { color: #fff; text-decoration: underline; }
+.content-section { min-width: 0; padding-top: .5rem; }
+.content-section h2 { border-bottom: 2px solid #f73b3b; padding-bottom: .35rem; margin-bottom: 1rem; }
+#links > ul { padding-left: 1.5rem; }
+#links li { margin-bottom: .4rem; overflow-wrap: anywhere; }
+.image-map-item img { display: block; }
+.table-wrapper { width: 100%; overflow-x: auto; }
+.grades { min-width: 320px; }
+.grades thead th { color: #fff; background: #f73b3b; }
+.grades .section-row td { color: #fff; background: #852222; font-weight: 700; text-align: center; }
+#form form { max-width: 540px; }
+#form label { margin-bottom: .35rem; }
+#form textarea { resize: vertical; }
+#site-footer { background: #852222; }
+#site-footer p { color: #ddd; }
+
+
+/* Галерея изображений */
+.gallery {
+  width: 100%;
+  min-width: 0;
+}
+
+.gallery-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-track {
+  --gallery-page-width: 100%;
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.gallery-slide {
+  flex: 0 0 calc((100% - 2rem) / 3);
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f1f1f1;
+}
+
+.gallery-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 9 / 16;
+}
+
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.gallery-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  background: #852222;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.gallery-arrow:hover,
+.gallery-arrow:focus {
+  background: #f73b3b;
+}
+
+.gallery-arrow:focus-visible {
+  outline: 3px solid #222;
+  outline-offset: 3px;
+}
+
+.gallery-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.gallery-pager {
+  margin: 0;
+  min-width: 120px;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+  .gallery-slide {
+    flex-basis: 100%;
+  }
+
+  .gallery-slide img {
+    height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-track {
+    transition: none;
+  }
+}
+
+
+.site-nav .feedback-open {
+  border: 0;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+  padding: .5rem 1rem;
+  cursor: pointer;
+}
+
+.site-nav .feedback-open:hover {
+  text-decoration: underline;
+}
+
+/ Затемнение фона /
+.feedback-modal[hidden] {
+  display: none !important;
+}
+
+.feedback-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, .65);
+}
+
+/ Окно формы /
+.feedback-dialog {
+  width: 100%;
+  max-width: 560px;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: white;
+
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .25);
+}
+
+/ Заголовок /
+.feedback-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.feedback-header h2 {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+/ Кнопка закрытия /
+.feedback-close {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+
+  color: white;
+  background: #852222;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.feedback-close:hover {
+  background: #f73b3b;
+}
+
+/ Сообщения о результате /
+.feedback-status:empty {
+  display: none;
+}
+
+.feedback-status.is-error {
+  color: #b00020;
+}
+
+.feedback-status.is-success {
+  color: #176b35;
+}
+
+/ Запрет прокрутки страницы за окном /
+body.feedback-modal-open {
+  overflow: hidden;
+}
+
+/ Адаптация под телефон */
+@media (max-width: 575.98px) {
+  .feedback-modal {
+    align-items: flex-start;
+    padding: .5rem;
+  }
+
+  .feedback-dialog {
+    max-height: calc(100vh - 1rem);
+    padding: 1rem;
+  }
+}
+
+
+.feedback-modal {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.feedback-dialog {
+  background-color: #ffffff !important;
+  color: #222222;
+  opacity: 1;
+  border: 1px solid #dddddd;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+.feedback-header h2 {
+  color: #852222;
+}
+
+
+.feedback-dialog label,
+.feedback-dialog p {
+  color: #222222;
+}
+
+
+.feedback-dialog input,
+.feedback-dialog textarea {
+  background-color: #ffffff;
+  color: #222222;
+  border: 1px solid #aaaaaa;
+}
+
+
+.feedback-dialog input::placeholder,
+.feedback-dialog textarea::placeholder {
+  color: #777777;
+}
+
+.feedback-dialog {
+  position: relative;
+  background-color: #ffffff !important;
+  color: #222222;
+
+  border: 3px solid #852222;
+  border-radius: 14px;
+
+  padding: 28px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+.feedback-header {
+  display: block;
+  position: relative;
+  padding-right: 40px;
+  margin-bottom: 18px;
+}
+
+.feedback-header h2 {
+  color: #852222;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+.feedback-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: #852222;
+  color: #ffffff;
+
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.feedback-close:hover {
+  background-color: #a83232;
+  transform: scale(1.08);
+}
+
+
+.feedback-dialog input:not([type="checkbox"]),
+.feedback-dialog textarea {
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.feedback-dialog input:focus,
+.feedback-dialog textarea:focus {
+  border-color: #852222;
+  box-shadow: 0 0 0 3px rgba(133, 34, 34, 0.15);
+  outline: none;
+}
+
+.feedback-dialog button[type="submit"] {
+  background-color: #852222;
+  border-color: #852222;
+  border-radius: 6px;
+  padding: 10px 24px;
+}
+
+.feedback-dialog button[type="submit"]:hover {
+  background-color: #a83232;
+  border-color: #a83232;
+}
+
+@media (max-width: 575.98px) {
+  .feedback-dialog {
+    padding: 22px 16px;
+  }
+}
